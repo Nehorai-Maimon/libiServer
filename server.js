@@ -14,8 +14,7 @@ app.use("/student", studentRoute)
 app.use("/event", eventRoute)
 app.use("/worker", workerRoute)
 
-app.use("/", ()=> "hay!!!")
-
+app.use("/", (res) => res.send("hay!!!"))
 
 app.listen(PORT, () => console.log(`server listening on ${PORT}`))
 require("./db").connect()
