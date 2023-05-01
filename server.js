@@ -7,9 +7,7 @@ const express = require("express"),
     workerRoute = require("./worker/workerRoute"),
     eventRoute = require("./event/eventRoute");
 
-app.use(cors({
-    origin: "https://libi-client.vercel.app/"
-}))
+app.use(cors())
 app.use(express.json())
 app.use("/student", studentRoute)
 app.use("/event", eventRoute)
